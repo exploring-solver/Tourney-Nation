@@ -4,11 +4,18 @@ import TournamentContext from '../Context/Tournaments/tournamentContext';
 
 const Tournaments = () => {
   const context = useContext(TournamentContext);
-  const { tournaments, getTournaments, editTournament } = context;
+  const { tournaments,getAllTournaments, editTournament } = context;
+  // const [myTournaments, setmyTournaments] = useState(getTournaments)
+  // useEffect(() => {
+  //   getTournaments();
+  //   // eslint-disable-next-line
+
+  // }, []);
 
   useEffect(() => {
-    getTournaments();
+    getAllTournaments();
     // eslint-disable-next-line
+
   }, []);
 
   const ref = useRef(null);
@@ -29,7 +36,7 @@ const Tournaments = () => {
   }
   return (
     <>
-      <TournamentName />
+      <TournamentName tournaments={tournaments}/>
     </>
   )
 }
