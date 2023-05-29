@@ -6,7 +6,7 @@ const { body, validationResult } = require('express-validator');
 const fetchuser = require('../middleware/fetchuser');
 const User = require('../models/User');
 
-const JWT_SECRET = 'wushangcl@n';
+require('dotenv').config(); // Load environment variables from .env file
 
 // Route 1: Create a user using POST "/api/auth/signup"
 router.post('/signup', [
@@ -52,7 +52,7 @@ router.post('/signup', [
                 id: user.id,
             },
         };
-        const authtoken = jwt.sign(data, JWT_SECRET);
+        const authtoken = jwt.sign(data, process.env.JWT_SECRET);
         res.json({ authtoken });
     } catch (error) {
         console.log(error.message);
@@ -92,7 +92,7 @@ router.post('/login', [
                 id: user.id
             }
         };
-        const authtoken = jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' });
+        const authtoken = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.json({ authtoken });
 
     } catch (error) {

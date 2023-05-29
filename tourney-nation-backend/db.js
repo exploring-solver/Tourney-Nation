@@ -1,8 +1,12 @@
-const mongoose  = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/tourney-nation",{
-    useNewUrlParser:true
-}).then(() => {
-    console.log('connection successful');
-}).catch((e) =>{
-    console.log(e);
-})
+const mongoose = require("mongoose");
+require('dotenv').config(); // Load environment variables from .env file
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connection to MongoDB successful");
+  })
+  .catch((error) => {
+    console.log("Error connecting to MongoDB:", error);
+  });
