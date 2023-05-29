@@ -2,7 +2,7 @@ import TournamentContext from "./tournamentContext";
 import { useState } from "react";
 
 const TournamentState = (props) => {
-  const host = "http://localhost:5000"
+  const host = "https://tourney-nation-backend.onrender.com"
   const tournamentsInitial = []
   const [tournaments, setTournaments] = useState(tournamentsInitial)
 
