@@ -13,7 +13,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("/api/auth/signup", {
+            const response = await axios.post("https://tourney-nation-backend.onrender.com/api/auth/signup", {
                 name,
                 username,
                 email,

@@ -19,7 +19,7 @@ const Login = ({loggedIn,updateLogin}) => {
     const onSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('/api/auth/login', formData);
+            const res = await axios.post('https://tourney-nation-backend.onrender.com/api/auth/login', formData);
             localStorage.setItem('authtoken', res.data.authtoken);
             updateLogin(true); // Update isLoggedIn state to true
             navigate('/');
