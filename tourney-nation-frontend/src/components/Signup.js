@@ -29,7 +29,7 @@ const Signup = () => {
                 console.log(error);
             }
         }
-    };
+    }; 
 
     return (
         <div className="bg-gray-800 py-28">

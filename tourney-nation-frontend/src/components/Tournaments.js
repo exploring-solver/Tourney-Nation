@@ -16,7 +16,7 @@ const Tournaments = () => {
     getAllTournaments();
     // eslint-disable-next-line
 
-  }, []);
+  });
 
   const ref = useRef(null);
   const refClose = useRef(null);
@@ -37,6 +37,7 @@ const Tournaments = () => {
   return (
     <>
       <TournamentName tournaments={tournaments}/>
+      <p onChange={onChange} updateTournament={updateTournament} handleClick={handleClick}></p>
     </>
   )
 }

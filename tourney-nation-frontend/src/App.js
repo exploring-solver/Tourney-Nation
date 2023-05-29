@@ -20,9 +20,9 @@ const App = () => {
     setLoggedIn(isLoggedIn);
   };
 
-  const handleNavigateToProtectedRoute = () => {
-    setShowModal(true);
-  };
+  // const handleNavigateToProtectedRoute = () => {
+  //   setShowModal(true);
+  // };
 
   const handleModalClose = () => {
     setShowModal(false);
@@ -39,7 +39,7 @@ const App = () => {
             path="/"
             element={<Home />}
           />
-          <Route
+          <Route 
             exact
             path="/about"
             element={<About />}

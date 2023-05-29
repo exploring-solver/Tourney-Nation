@@ -26,7 +26,7 @@ const TournamentName = ({ tournaments}) => {
           <h1 className="text-white text-3xl font-mono pt-9 pb-4">Tournaments</h1>
           
 
-        </div>
+        </div> 
           <input
             type="text"
             className="border-2 my-4 border-transparent text-base w-56 bg-gray-700 focus:border-indigo-500 outline-none rounded-sm text-zinc-300 px-2 py-1 font-mono"

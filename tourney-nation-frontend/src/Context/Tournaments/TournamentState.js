@@ -33,7 +33,7 @@ const TournamentState = (props) => {
       headers: {
         'Content-Type': 'application/json',
         "auth-token": authToken
-      }
+      } 
     });
     const json = await response.json()
     setTournaments(json)
@@ -70,6 +70,7 @@ const TournamentState = (props) => {
     });
     const newTournaments = tournaments.filter((tournament) => { return tournament._id !== id })
     setTournaments(newTournaments)
+    console.log(response)
   }
 
   // Edit a Tournament
@@ -85,6 +86,7 @@ const TournamentState = (props) => {
       body: JSON.stringify({ name, description, date })
     });
     const json = await response.json();
+    console.log(json)
 
     let newTournaments = JSON.parse(JSON.stringify(tournaments))
     // Logic to edit in client
