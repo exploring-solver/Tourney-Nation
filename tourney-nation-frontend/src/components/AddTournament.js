@@ -41,7 +41,7 @@ const AddTournament = () => {
     return (
         <div className="tournament-landing bg-slate-800 pb-10">
             <div className="w-[50%] m-auto flex flex-col gap-3">
-                <h1 className="text-2xl font-mono font-bold mb-2 text-indigo-600">Add a Tournament</h1>
+                <h1 className="text-2xl font-mono font-bold mb-2 text-indigo-600">Create a Tournament</h1>
                 <form className="my-3">
                     <div className="flex justify-between w-[400px]">
                         <div className="flex flex-col gap-6 justify-center">

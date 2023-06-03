@@ -1,20 +1,20 @@
-import React, { useContext, useEffect, useState } from 'react'
-import TournamentContext from '../Context/Tournaments/tournamentContext';
+import React from 'react'
 import { Link } from 'react-router-dom';
 
-const TournamentHeader = () => {
-    const context = useContext(TournamentContext);
-    const { getTournaments } = context;
-    const [myTournamentsBtnClicked, setmyTournamentsBtnClicked] = useState(false)
-    const handleClick = () => {
-        setmyTournamentsBtnClicked(true); // Set the button click state to true
-    };
-    useEffect(() => {
-        if (myTournamentsBtnClicked) {
-            getTournaments();
-            setmyTournamentsBtnClicked(false); // Reset the button click state
-        }
-    }, [myTournamentsBtnClicked, getTournaments]);
+const TournamentHeader = ({ handleClick }) => {
+    // const context = useContext(TournamentContext);
+
+    // const { getTournaments } = context;
+    // const [myTournamentsBtnClicked, setmyTournamentsBtnClicked] = useState(false)
+    // const handleClick = () => {
+    //     setmyTournamentsBtnClicked(true); // Set the button click state to true
+    // };
+    // useEffect(() => {
+    //     if (myTournamentsBtnClicked) {
+    //         getTournaments();
+    //         setmyTournamentsBtnClicked(false); // Reset the button click state
+    //     }
+    // }, [myTournamentsBtnClicked, getTournaments]);
 
     return (
 

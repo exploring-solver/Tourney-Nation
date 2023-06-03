@@ -5,7 +5,7 @@ import TournamentHeader from './TournamentHeader';
 
 const Tournaments = () => {
   const context = useContext(TournamentContext);
-  const { tournaments,getAllTournaments} = context;
+  const { tournaments,getAllTournaments , getTournaments} = context;
   // const [myTournaments, setmyTournaments] = useState(getTournaments)
   // useEffect(() => {
   //   getTournaments();
@@ -16,14 +16,17 @@ const Tournaments = () => {
   useEffect(() => {
     getAllTournaments();
     // eslint-disable-next-line
-    
-  });
-  
+  }, []);
+
+  const handleClick = () => {
+    getTournaments();
+    console.log('clicked my tournaments')
+  };
 
   return (
     <>
-      <TournamentHeader/>
-      <TournamentName tournaments={tournaments}/>
+      <TournamentHeader handleClick = {handleClick}/>
+      <TournamentName tournaments={tournaments} />
     </>
   )
 }

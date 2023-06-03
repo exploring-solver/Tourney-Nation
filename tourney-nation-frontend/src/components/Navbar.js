@@ -47,7 +47,7 @@ const Navbar = ({ loggedIn, updateLogin}) => {
               <Link
                 href='#'
                 className='block px-4 py-2 bg-zinc-700 font-mono text-zinc-200 hover:bg-zinc-600 text-base'
-                to='/tournaments'
+                to='/createtournament'
               >
                 Create Tournament
               </Link>
